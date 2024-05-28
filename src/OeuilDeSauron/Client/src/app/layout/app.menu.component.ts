@@ -31,7 +31,11 @@ export class AppMenuComponent implements OnInit {
                 label: 'Health Check',
                 icon: 'pi pi-fw pi-briefcase',
                 items: [
-                   
+                    {
+                        label: 'User Scenario Validation',
+                        icon: 'pi pi-fw pi-users',
+                        routerLink: ['/pages/scenario-validation']
+                    },
                     {
                         label: 'Domain Validation',
                         icon: 'pi pi-fw pi-globe',
@@ -42,11 +46,7 @@ export class AppMenuComponent implements OnInit {
                         icon: 'pi pi-fw pi-lock',
                         routerLink: ['/pages/ssl-validation']
                     },
-                    {
-                        label: 'User Scenario Validation',
-                        icon: 'pi pi-fw pi-users',
-                        routerLink: ['/pages/scenario-validation']
-                    },
+                    
                     // {
                     //     label: 'Auth',
                     //     icon: 'pi pi-fw pi-user',
