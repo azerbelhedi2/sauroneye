@@ -1,4 +1,4 @@
-<p-dialog header="User Details" [(visible)]="display" [modal]="true" showEffect="fade" [style]="{width: '30vw'}" [breakpoints]="{'960px': '75vw'}">
+<!-- <p-dialog header="User Details" [(visible)]="display" [modal]="true" showEffect="fade" [style]="{width: '30vw'}" [breakpoints]="{'960px': '75vw'}">
     <p class="line-height-3 m-0">
         
     </p>
@@ -6,8 +6,30 @@
     <ng-template pTemplate="footer">
             <button pButton icon="pi pi-check" (click)="display=false" label="Ok" class="p-button-outlined"></button>
     </ng-template>
+</p-dialog> -->
+<p-dialog header="User Details" [(visible)]="display" [modal]="true" showEffect="fade" [style]="{width: '30vw'}" [breakpoints]="{'960px': '75vw'}">
+    <table style="width: 100%; font-family: 'Roboto', sans-serif; font-size: 24px;">
+        <tr>
+            <td style="color: green;">First Name:</td>
+            <td style="color: black;">{{userDetails?.firstName}}</td>
+        </tr>
+        <tr>
+            <td style="color: green;">Last Name:</td>
+            <td style="color: black;">{{userDetails?.lastName}}</td>
+        </tr>
+        <tr>
+            <td style="color: green;">Email:</td>
+            <td style="color: black;">{{userDetails?.email}}</td>
+        </tr>
+        <tr>
+            <td style="color: green;">Role:</td>
+            <td style="color: black;">{{userDetails?.role}}</td>
+        </tr>
+    </table>
+    <ng-template pTemplate="footer">
+        <button pButton icon="pi pi-check" (click)="display=false" label="Ok" class="p-button-outlined"></button>
+    </ng-template>
 </p-dialog>
-
 <div class="layout-topbar">
     <a class="layout-topbar-logo" routerLink="">
         <img src="assets\img\logo-upperlink.png" width="70%" height="50%" alt="logo">
